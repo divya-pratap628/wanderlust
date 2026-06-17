@@ -1,0 +1,32 @@
+// POST → used for creating data.
+
+
+//  👉 req.body.listing
+// This is the data from form
+
+// Example:
+
+// {
+//   listing: {
+//     title: "Hotel",
+//     price: 1000,
+//     location: "Jaipur"
+//   }
+// }
+//
+
+// A session is a way to store data about a user on the server so it persists across multiple requests.
+
+AIRBNB/
+├── init/           → Seed data (fill database with sample listings)
+├── models/         → Database structure definitions
+├── routes/         → URL handlers (what happens when you visit a page)
+├── views/          → HTML pages (what users see)
+├── public/         → CSS and JS files
+├── utils/          → Helper tools
+├── app.js          → Main file (heart of the app)
+└── schema.js       → Input validation rules
+
+
+/// important 
+in resume also write MVC framwork!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
