@@ -1,32 +1,66 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="container fade-in">
-  <h2>Edit Listing</h2>
+<div class="edit-container">
+    <div class="edit-card">
+        <h1>Edit Listing</h1>
 
-  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data">
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data">
 
-    <label>Title</label>
-    <input name="listing[title]" value="<%= listing.title %>" type="text" />
+            <label>Title</label>
+            <input
+                type="text"
+                name="listing[title]"
+                value="<%= listing.title %>"
+                required
+            >
 
-    <label>Description</label>
-    <textarea name="listing[description]"><%= listing.description %></textarea>
+            <label>Description</label>
+            <textarea
+                name="listing[description]"
+                rows="5"
+                required
+            ><%= listing.description %></textarea>
 
-      <d>
-        Original Listing Image <br />
-        <img src="<%= originalImageUrl %>" />
-      </div>
-    <label>Upload Image</label>
-    <input name="listing[image]" type="file">
+            <label>Price</label>
+            <input
+                type="number"
+                name="listing[price]"
+                value="<%= listing.price %>"
+                required
+            >
 
-    <label>Price</label>
-    <input name="listing[price]" value="<%= listing.price %>" type="number">
+            <label>Location</label>
+            <input
+                type="text"
+                name="listing[location]"
+                value="<%= listing.location %>"
+                required
+            >
 
-    <label>Location</label>
-    <input name="listing[location]" value="<%= listing.location %>" type="text">
+            <label>Country</label>
+            <input
+                type="text"
+                name="listing[country]"
+                value="<%= listing.country %>"
+                required
+            >
 
-    <label>Country</label>
-    <input name="listing[country]" value="<%= listing.country %>" type="text">
+            <label>Current Image</label>
+            <img
+                src="<%= originalImageUrl %>"
+                class="preview-img"
+            >
 
-    <button class="btn">Update</button>
-  </form>
+            <label>Upload New Image</label>
+            <input
+                type="file"
+                name="listing[image]"
+            >
+
+            <button class="update-btn">
+                Update Listing
+            </button>
+
+        </form>
+    </div>
 </div>
